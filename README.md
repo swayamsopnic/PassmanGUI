@@ -13,6 +13,8 @@ This is a password management application developed using Python's Tkinter libra
 - **Password Strength Meter**: Check the strength of a given password.
 - **Security Reports**: Generate domain, email breach, password breach, and username breach reports.
 
+#Please change the path in program and set the csv file uinfo and image in correct place
+
 ## Installation
 
 1. Clone this repository to your local machine:
@@ -39,46 +41,7 @@ This is a password management application developed using Python's Tkinter libra
 
 2. The application window will open, providing a menu for various functionalities.
 
-## Code Structure
 
-- **`main.py`**: The main script containing the application logic and Tkinter UI setup.
-- **`utils.py`**: (Optional) Utility functions for encryption, decryption, and password generation (if separated).
-- **`requirements.txt`**: Lists the dependencies required for the application.
-
-## Example Functions
-
-### Generate Password
-
-```python
-def generate_password(length=12, include_uppercase=True, include_numbers=True, include_symbols=True):
-    characters = string.ascii_lowercase
-    if include_uppercase:
-        characters += string.ascii_uppercase
-    if include_numbers:
-        characters += string.digits
-    if include_symbols:
-        characters += string.punctuation
-    
-    password = ''.join(secrets.choice(characters) for _ in range(length))
-    return password
-### Check Password Strength
-
-```python
-def password_strength(password):
-    length_criteria = len(password) >= 12
-    uppercase_criteria = re.search(r'[A-Z]', password) is not None
-    lowercase_criteria = re.search(r'[a-z]', password) is not None
-    digit_criteria = re.search(r'\d', password) is not None
-    symbol_criteria = re.search(r'[!@#$%^&*(),.?":{}|<>]', password) is not None
-
-    score = sum([length_criteria, uppercase_criteria, lowercase_criteria, digit_criteria, symbol_criteria])
-
-    if score == 5:
-        return 'Strong'
-    elif score >= 3:
-        return 'Medium'
-    else:
-        return 'Weak'
 ## Contributing
 
 Feel free to fork the repository and submit pull requests for improvements or bug fixes. Please follow the code style guidelines and include tests for new features.
