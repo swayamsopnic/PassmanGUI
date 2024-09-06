@@ -13,7 +13,7 @@ This is a password management application developed using Python's Tkinter libra
 - **Password Strength Meter**: Check the strength of a given password.
 - **Security Reports**: Generate domain, email breach, password breach, and username breach reports.
 
-#Please change the path in program and set the csv file uinfo and image in correct place
+# Please change the path in program and set the csv file uinfo and image in correct place
 
 ## Installation
 
